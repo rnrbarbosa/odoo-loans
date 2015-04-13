@@ -2,6 +2,7 @@
 <openerp>
 	<data>
 
+
 		<record model="ir.ui.view" id="view_loan_type_form">
 			<field name="name">account.loan.proof.type.form</field>
 			<field name="model">account.loan.proof.type</field>
@@ -31,7 +32,9 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 		</record>
-		<menuitem name="Financial Management/Configuration/Loan" id="menu_loan_root"/>
+		<menuitem name="Financial Management" id="menu_root"  sequence="1"/>
+		<menuitem name="Financial Management/Configuration" parent="menu_root" id="menu_fin_mgt_config"/>
+		<menuitem name="Financial Management/Configuration/Loan" parent="menu_fin_mgt_config"  id="menu_loan_root"/>
 		<menuitem name="Financial Management/Configuration/Loan/Proof Type" parent="menu_loan_root" id="menu_loan_type"/>
 
 		<record model="ir.ui.view" id="view_loan_installment_period_form">
