@@ -21,8 +21,7 @@
 ##############################################################################
 
 import time
-from osv import osv
-from osv import fields
+from openerp.osv import fields, osv
 
 class account_loan_loantype(osv.osv):
     _name = "account.loan.loantype"

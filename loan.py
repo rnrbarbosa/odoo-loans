@@ -22,9 +22,7 @@
 
 import time
 import datetime
-import pooler
-from osv import osv
-from osv import fields
+from openerp.osv import fields, osv
 from datetime import date
 
 class loan_customer(osv.osv):
@@ -121,9 +119,8 @@ class account_loan(osv.osv):
         'interest' : fields.float('Interest'),
         'voucher_id': fields.many2one('account.voucher', 'Voucher',readonly=True),
         'notes' : fields.text('Description'),
-        'cus_pay_acc': fields.property(
+        'cus_pay_acc': fields.many2one(
                 'account.account',
-                type='many2one',
                 relation='account.account',
                 string="Customer Loan Account",
                 method=True,
@@ -131,9 +128,8 @@ class account_loan(osv.osv):
                 domain="[('type','=','other')]",
                 readonly=True
         ),
-        'int_acc': fields.property(
+        'int_acc': fields.many2one(
                 'account.account',
-                type='many2one',
                 relation='account.account',
                 string="Interest Account",
                 method=True,
@@ -141,9 +137,8 @@ class account_loan(osv.osv):
                 domain="[('type', '=', 'other')]",
                 readonly=True
         ),
-        'bank_acc': fields.property(
+        'bank_acc': fields.many2one(
                 'account.account',
-                type='many2one',
                 relation='account.account',
                 string="Bank Account",
                 method=True,
@@ -151,9 +146,8 @@ class account_loan(osv.osv):
                 domain="[('type', '=', 'other')]",
                 readonly=True
         ),
-        'proc_fee': fields.property(
+        'proc_fee': fields.many2one(
                 'account.account',
-                type='many2one',
                 relation='account.account',
                 string="Processing Fee Account",
                 method=True,
@@ -161,9 +155,8 @@ class account_loan(osv.osv):
                 domain="[('type', '=', 'other')]",
                 readonly=True
         ),                        
-        'anal_acc': fields.property(
+        'anal_acc': fields.many2one(
                 'account.analytic.account',
-                type='many2one',
                 relation='account.analytic.account',
                 string="Analytic Account",
                 method=True,

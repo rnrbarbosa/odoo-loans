@@ -25,5 +25,5 @@ import loan_proof
 import cheque
 import installment
 import loantype
-import wizard
-import report
+#import wizard
+#import report

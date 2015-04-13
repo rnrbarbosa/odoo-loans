@@ -20,11 +20,9 @@
 #
 ##############################################################################
 
-import ir
+#import ir
 import time
-import pooler
-from osv import osv
-from osv import fields
+from openerp.osv import fields, osv
 
 class account_loan_bank_cheque(osv.osv):
     _name='account.loan.bank.cheque'
