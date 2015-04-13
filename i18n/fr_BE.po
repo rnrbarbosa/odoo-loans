@@ -1,0 +1,970 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* loan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 5.0.6\n"
+"Report-Msgid-Bugs-To: support@openerp.com\n"
+"POT-Creation-Date: 2009-11-26 04:55:20+0000\n"
+"PO-Revision-Date: 2009-11-26 04:55:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: loan
+#: field:account.loan.loantype,interestversion_ids:0
+msgid "Interest Versions"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,return_type:0
+msgid "By Cash"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversionline,max_month:0
+msgid "Maximum Month"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,auto_id:0
+msgid "Auto Id"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_proof_form
+msgid "account.account.loan.proof"
+msgstr ""
+
+#. module: loan
+#: rml:letter.letter_info:0
+msgid "Loan Description"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversionline,min_month:0
+msgid "Minimum Month"
+msgstr ""
+
+#. module: loan
+#: constraint:ir.actions.act_window:0
+msgid "Invalid model name in the action definition."
+msgstr ""
+
+#. module: loan
+#: rml:letter.letter_info:0
+msgid "Income"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+#: rml:letter.letter_info:0
+msgid "Loan Details"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,approve_date:0
+msgid "Approve Date"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.loantype:0
+#: model:ir.ui.menu,name:loan.menu_account_loan_loantype
+msgid "Interest List"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,yr_int_amt:0
+msgid "Yearly Interest Amount"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan.proof,state:0
+msgid "Varified"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversionline,max_amount:0
+msgid "Maximum Amount"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.bank.cheque:0
+msgid "Set to Draft"
+msgstr ""
+
+#. module: loan
+#: model:ir.model,name:loan.model_account_loan_bank_cheque
+msgid "Bank Account Cheque"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.loantype.interestversion:0
+msgid "Loantype Interest Version"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_loantype_interestversionline
+#: model:ir.model,name:loan.model_account_loan_loantype_interestversionline
+msgid "account.loan.loantype.interestversionline"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,approve_amount:0
+msgid "Approve Amount"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,proof_2:0
+msgid "Gaurenter 2"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,proof_1:0
+msgid "Gaurenter 1"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.proof,note:0
+msgid "Proof Note"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_installment_form
+#: model:ir.model,name:loan.model_account_loan_installment
+msgid "account.loan.installment"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,state:0
+msgid "Approved"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,emi_cal:0
+msgid "Calculated Monthly EMI"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,state:0
+msgid "Applied"
+msgstr ""
+
+#. module: loan
+#: field:res.partner.bank,account_id:0
+msgid "Account"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,tot_amt:0
+msgid "Total Amount with Interest"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+#: field:account.loan.bank.cheque,note:0
+msgid "Notes"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Re Apply"
+msgstr ""
+
+#. module: loan
+#: wizard_field:wizard_cus_acct,init,proc_fee:0
+msgid "Processing fee Account"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype,prooftypes:0
+msgid "Taxes"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.loantype.interestversionline:0
+msgid "Interest Version Line"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.proof:0
+#: field:account.loan.proof,document:0
+msgid "Proof Document"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversion,interestversionline_ids:0
+msgid "Current Interest Version"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.report.xml,name:loan.letter_letter_info
+msgid "Loan Paper"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,running_loan:0
+msgid "Current Loans"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.loantype.interestversionline:0
+msgid "Loan Interest Version Line"
+msgstr ""
+
+#. module: loan
+#: model:ir.ui.menu,name:loan.menu_partner_loan
+msgid "Report Of Partner Loan"
+msgstr ""
+
+#. module: loan
+#: wizard_view:wizard_cus_acct,init:0
+msgid "Select period"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,loan_id:0
+msgid "Loan Id"
+msgstr ""
+
+#. module: loan
+#: field:res.partner,incom:0
+msgid "Monthly Incom"
+msgstr ""
+
+#. module: loan
+#: model:ir.ui.menu,name:loan.menu_action_account_loan_tree_large
+msgid "Large Loans"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,anal_acc:0
+msgid "Analytic Account"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,cus_pay_acc:0
+#: wizard_field:wizard_cus_acct,init,cus_pay_acc:0
+msgid "Customer Loan Account"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_tree_approve
+#: model:ir.actions.act_window,name:loan.action_account_loan_tree_large
+#: model:ir.actions.act_window,name:loan.action_account_loan_tree_mediul
+#: model:ir.actions.act_window,name:loan.action_account_loan_tree_small
+#: model:ir.model,name:loan.model_account_loan
+msgid "account.loan"
+msgstr ""
+
+#. module: loan
+#: wizard_field:account.partner.loan,init,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,int_acc:0
+#: wizard_field:wizard_cus_acct,init,int_acc:0
+msgid "Interest Account"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,loan_amount:0
+#: field:account.loan,loan_amt:0
+#: field:account.loan.bank.cheque,loan:0
+msgid "Loan Amount"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.wizard,name:loan.wizard_cus_acct
+msgid "Create Account"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,return_type:0
+msgid "Automatic Payment"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,int_rate:0
+msgid "Interest Rate (Reducing)"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,interest:0
+msgid "Interest Amount"
+msgstr ""
+
+#. module: loan
+#: wizard_button:wizard_cus_acct,init,create:0
+msgid "Create"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,move_id:0
+msgid "Move Line"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,state:0
+#: field:account.loan.bank.cheque,state:0
+#: field:account.loan.proof,state:0
+msgid "State"
+msgstr ""
+
+#. module: loan
+#: wizard_button:account.partner.loan,init,report:0
+msgid "Print Loan Report."
+msgstr ""
+
+#. module: loan
+#: field:account.loan,interest:0
+#: field:account.loan.installment,interest:0
+msgid "Interest"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.proof,type:0
+msgid "Type"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan.loantype,calculation:0
+msgid "Flat"
+msgstr ""
+
+#. module: loan
+#: code:addons/loan/loan_proof.py:0
+#, python-format
+msgid "Error !"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,return_date:0
+msgid "Cheque Return Date"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_bank_cheque
+#: model:ir.actions.act_window,name:loan.action_account_loan_bank_cheque_draft
+#: model:ir.actions.act_window,name:loan.action_account_loan_bank_cheque_posted
+msgid "account.loan.bank.cheque"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.proof:0
+msgid "Accept"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_loantype
+msgid "account.loan.loantype"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.proof,name:0
+msgid "Proof name"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+#: view:account.loan.bank.cheque:0
+msgid "Cheque Details"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,state:0
+msgid "Proof Approved"
+msgstr ""
+
+#. module: loan
+#: code:addons/loan/loan.py:0
+#, python-format
+msgid "Invalid action !"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,pricelist_id:0
+msgid "Pricelist"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Invoicing Information"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Installment Information"
+msgstr ""
+
+#. module: loan
+#: constraint:ir.ui.view:0
+msgid "Invalid XML for View Architecture!"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,interest_rate:0
+msgid "Interest Rate"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "BankChaques Information"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_loantype_interestversion
+#: model:ir.model,name:loan.model_account_loan_loantype_interestversion
+msgid "account.loan.loantype.interestversion"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.proof.type,name:0
+msgid "Proof Type Name"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,contact:0
+msgid "Contact"
+msgstr ""
+
+#. module: loan
+#: model:ir.ui.menu,name:loan.menu_action_account_loan_tree_small
+msgid "Small Loans"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.loantype.interestversion:0
+#: model:ir.ui.menu,name:loan.menu_account_loan_loantype_interestversion
+msgid "Interest Version"
+msgstr ""
+
+#. module: loan
+#: wizard_field:wizard_cus_acct,init,parent_emp_pay_acc:0
+msgid "Parent Loan Account"
+msgstr ""
+
+#. module: loan
+#: field:loan.installment.period,name:0
+msgid "Period Name"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Final Approvel"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Invoice Line"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,total_installment:0
+msgid "Total Installment"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.wizard,name:loan.wizard_partner_loan
+msgid "Report On Partner Loan"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversion,start_date:0
+msgid "Start Date"
+msgstr ""
+
+#. module: loan
+#: wizard_view:account.bank.cheque.process,init:0
+msgid "change State : Draft to Posted "
+msgstr ""
+
+#. module: loan
+#: field:account.loan,proc_fee:0
+msgid "Processing Fee Account"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,loan_type:0
+#: field:account.loan.loantype.interestversion,loantype_id:0
+msgid "Loan Type"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Calculate"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Loan Paid"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_proof_tree
+#: model:ir.model,name:loan.model_account_loan_proof
+msgid "account.loan.proof"
+msgstr ""
+
+#. module: loan
+#: help:account.loan,anal_acc:0
+msgid "This analytic account will be used"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,return_type:0
+msgid "Payment Type"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan.bank.cheque,state:0
+#: selection:account.loan.proof,state:0
+#: model:ir.ui.menu,name:loan.menu_action_account_loan_bank_cheque_draft
+msgid "Draft"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Terms and Confitions"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,state:0
+msgid "Reject"
+msgstr ""
+
+#. module: loan
+#: model:ir.module.module,shortdesc:loan.module_meta_information
+msgid "Loan Management"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.wizard,name:loan.wizard_cheque_state_process
+msgid "Cheque Process"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,tot_int_amt:0
+msgid "Total Interest Amount"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_loan_type
+#: model:ir.model,name:loan.model_account_loan_proof_type
+msgid "account.loan.proof.type"
+msgstr ""
+
+#. module: loan
+#: model:ir.model,name:loan.model_account_loan_loantype
+msgid "account loan type "
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "EMI Calculator"
+msgstr ""
+
+#. module: loan
+#: model:ir.ui.menu,name:loan.menu_account_loan_bank_cheque_form
+msgid "Cheque"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversion,active:0
+msgid "Active"
+msgstr ""
+
+#. module: loan
+#: rml:letter.letter_info:0
+msgid ":"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,state:0
+msgid "Quotation"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,month:0
+msgid "Loan Tenure (Months)"
+msgstr ""
+
+#. module: loan
+#: model:ir.module.module,description:loan.module_meta_information
+msgid "Loan Management System\n"
+"    * Integrated to Accounting System\n"
+"    * Usefull for any type of Loans - Home, Business, Personal\n"
+"    * Clean Varification Process for Proofs \n"
+"    * Workflow for Loan Approval/Rejection\n"
+"    * Reports related to the Loans, Documents, Loan Papers\n"
+"    * Dynamic Interest Rates Calculation\n"
+"    "
+msgstr ""
+
+#. module: loan
+#: field:account.loan.installment,capital:0
+#: field:account.loan.installment,total:0
+#: model:ir.ui.menu,name:loan.menu_account_loan_installment_form
+msgid "Installment"
+msgstr ""
+
+#. module: loan
+#: model:ir.ui.menu,name:loan.menu_action_account_loan_tree_approve
+msgid "Apprived Loans"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,apply_date:0
+msgid "Apply Date"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,date:0
+msgid "Date"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.proof.type,shortcut:0
+msgid "Shortcut"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,loan_period:0
+#: model:ir.ui.menu,name:loan.menu_loan_installment_period
+#: view:loan.installment.period:0
+#: field:loan.installment.period,period:0
+msgid "Loan Period"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,installment_id:0
+#: field:account.loan.bank.cheque,cheque_id:0
+#: view:account.loan.installment:0
+msgid "Installments"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan.proof,state:0
+msgid "Under Varification"
+msgstr ""
+
+#. module: loan
+#: model:ir.ui.menu,name:loan.menu_action_account_loan_tree_mediul
+msgid "Medium Loans"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,account_id:0
+msgid "General Account"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,code:0
+msgid "Code"
+msgstr ""
+
+#. module: loan
+#: model:ir.ui.menu,name:loan.menu_loan_type
+msgid "Proof Type"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+#: field:account.loan.bank.cheque,loan_id:0
+#: field:account.loan.installment,loan_id:0
+#: field:account.loan.proof,loan_id:0
+msgid "Loan"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversion,sequence:0
+#: field:account.loan.loantype.interestversionline,sequence:0
+msgid "Sequence"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "General Information"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,flat_pm:0
+msgid "Flat Interest Rate PM"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,state:0
+#: selection:account.loan.bank.cheque,state:0
+msgid "Done"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,voucher_id:0
+#: field:account.loan.bank.cheque,voucher_id:0
+msgid "Voucher"
+msgstr ""
+
+#. module: loan
+#: wizard_button:account.bank.cheque.process,init,end:0
+#: view:account.loan.bank.cheque:0
+#: selection:account.loan.bank.cheque,state:0
+#: selection:account.loan.proof,state:0
+#: wizard_button:account.partner.loan,init,end:0
+#: wizard_button:wizard_cus_acct,init,end:0
+msgid "Cancel"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan.loantype,calculation:0
+msgid "Reducing"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,flat_pa:0
+msgid "Flat Interest Rate PA"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype,name:0
+msgid "Type Name"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Reset"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversionline,interestversion_id:0
+msgid "Loan Interest Id"
+msgstr ""
+
+#. module: loan
+#: constraint:ir.model:0
+msgid "The Object name must start with x_ and not contain any special character !"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.bank.cheque:0
+msgid "Post to Bank"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_account_loan_form
+#: model:ir.ui.menu,name:loan.menu_action_account_loan_form
+msgid "Personal Loan"
+msgstr ""
+
+#. module: loan
+#: wizard_view:account.bank.cheque.process,init:0
+#: wizard_button:account.bank.cheque.process,init,draft2posted:0
+msgid "Draft To Posted"
+msgstr ""
+
+#. module: loan
+#: code:addons/loan/loan_proof.py:0
+#, python-format
+msgid "Please Save Record First"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan.bank.cheque,state:0
+msgid "Return"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,name:0
+#: field:account.loan,notes:0
+#: field:account.loan.installment,name:0
+msgid "Description"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversionline,min_amount:0
+msgid "Minimum Amount"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Approve By Finance"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Monthly Payment (EMI)"
+msgstr ""
+
+#. module: loan
+#: code:addons/loan/loan.py:0
+#, python-format
+msgid "Cannot delete vouchers(s) which are already opened or paid !"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Reject Loan"
+msgstr ""
+
+#. module: loan
+#: rml:letter.letter_info:0
+msgid "Address"
+msgstr ""
+
+#. module: loan
+#: help:wizard_cus_acct,init,parent_emp_pay_acc:0
+msgid "This is parent account for Employee Payable Account"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,loan_bank_id:0
+msgid "Bank"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan.bank.cheque,state:0
+#: model:ir.ui.menu,name:loan.menu_action_account_loan_bank_cheque_posted
+msgid "Posted"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,partner_id:0
+#: field:account.loan.bank.cheque,partner_id:0
+#: field:account.move.line,acc_loan_id:0
+msgid "Customer"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversion,end_date:0
+msgid "End Date"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,name:0
+#: field:account.loan.loantype.interestversion,name:0
+#: rml:letter.letter_info:0
+msgid "Name"
+msgstr ""
+
+#. module: loan
+#: wizard_view:account.partner.loan,init:0
+msgid "Select partner"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.bank.cheque:0
+#: selection:account.loan.bank.cheque,state:0
+msgid "Clear"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,bank_acc:0
+#: wizard_field:wizard_cus_acct,init,bank_acc:0
+msgid "Bank Account"
+msgstr ""
+
+#. module: loan
+#: model:ir.actions.act_window,name:loan.action_loan_installment_period
+#: model:ir.model,name:loan.model_loan_installment_period
+msgid "loan.installment.period"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Approve Proofs"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,id:0
+msgid "ID"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,proof_id:0
+msgid "Proof Detail"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.installment,cheque_id:0
+msgid "Bank Cheque"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,clear_date:0
+msgid "Cheque Clearing Date"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.loantype:0
+msgid "Loan Types"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,cheque_ids:0
+msgid "Cheque Detail"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.proof:0
+msgid "Apply For Varification"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.bank.cheque,cheque_amount:0
+msgid "Cheque Amount"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.bank.cheque:0
+msgid "Bounce"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.proof.type:0
+msgid "Loan Proof Type"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversionline,rate:0
+msgid "Rate"
+msgstr ""
+
+#. module: loan
+#: field:account.loan,process_fee:0
+msgid "Processing Fee"
+msgstr ""
+
+#. module: loan
+#: view:account.loan.proof:0
+msgid "Refuse"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Accounting"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype.interestversionline,name:0
+msgid "Interest ID"
+msgstr ""
+
+#. module: loan
+#: view:account.loan:0
+msgid "Proofs"
+msgstr ""
+
+#. module: loan
+#: field:account.loan.loantype,calculation:0
+msgid "Calculation Method"
+msgstr ""
+
+#. module: loan
+#: selection:account.loan,return_type:0
+msgid "By Cheque"
+msgstr ""
+
