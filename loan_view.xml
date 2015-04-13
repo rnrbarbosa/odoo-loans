@@ -31,7 +31,8 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 		</record>
-		<menuitem name="Financial Management/Configuration/Loan/Proof Type" action="action_loan_type" id="menu_loan_type"/>
+		<menuitem name="Financial Management/Configuration/Loan" id="menu_loan_root"/>
+		<menuitem name="Financial Management/Configuration/Loan/Proof Type" parent="menu_loan_root" id="menu_loan_type"/>
 
 		<record model="ir.ui.view" id="view_loan_installment_period_form">
 			<field name="name">loan.installment.period.form</field>
@@ -62,7 +63,7 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 		</record>
-		<menuitem name="Financial Management/Configuration/Loan/Loan Period" action="action_loan_installment_period" id="menu_loan_installment_period"/>
+		<menuitem name="Financial Management/Configuration/Loan/Loan Period" parent="menu_loan_root" id="menu_loan_installment_period"/>
 
 		<record model="ir.ui.view" id="view_loan_form">
 			<field name="name">res.partner.form.inherit</field>
@@ -292,7 +293,7 @@
 			<field name="view_mode">form,tree</field>
 		</record>
 
-		<menuitem name="Financial Management/Loan/Personal Loan" id="menu_action_account_loan_form" action="action_account_loan_form"/>
+		<menuitem name="Financial Management/Loan/Personal Loan" id="menu_action_account_loan_form" parent="menu_loan_root" />
 
 		<record model="ir.actions.act_window" id="action_account_loan_tree_approve">
 			<field name="name">account.loan</field>
@@ -301,7 +302,7 @@
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('state','!=','approved')]</field>
 		</record>
-		<menuitem name="Financial Management/Loan/Personal Loan/Apprived Loans" id="menu_action_account_loan_tree_approve" action="action_account_loan_tree_approve"/>
+		<menuitem name="Financial Management/Loan/Personal Loan/Approved Loans" parent="menu_action_account_loan_form"  id="menu_action_account_loan_tree_approve"/>
 
 		<record model="ir.actions.act_window" id="action_account_loan_tree_small">
 			<field name="name">account.loan</field>
@@ -310,7 +311,7 @@
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('loan_amount','&lt;=','50000')]</field>
 		</record>
-		<menuitem name="Financial Management/Loan/Personal Loan/Small Loans" id="menu_action_account_loan_tree_small" action="action_account_loan_tree_small"/>
+		<menuitem name="Financial Management/Loan/Personal Loan/Small Loans" parent="menu_action_account_loan_form"  id="menu_action_account_loan_tree_small" />
 
 		<record model="ir.actions.act_window" id="action_account_loan_tree_mediul">
 			<field name="name">account.loan</field>
@@ -319,7 +320,7 @@
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('loan_amount','&gt;','50000'),('loan_amount','&lt;=','200000')]</field>
 		</record>
-		<menuitem name="Financial Management/Loan/Personal Loan/Medium Loans" id="menu_action_account_loan_tree_mediul" action="action_account_loan_tree_mediul"/>
+		<menuitem name="Financial Management/Loan/Personal Loan/Medium Loans"  parent="menu_action_account_loan_form" id="menu_action_account_loan_tree_mediul" />
 
 		<record model="ir.actions.act_window" id="action_account_loan_tree_large">
 			<field name="name">account.loan</field>
@@ -328,7 +329,7 @@
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('loan_amount','&gt;','200000')]</field>
 		</record>
-		<menuitem name="Financial Management/Loan/Personal Loan/Large Loans" id="menu_action_account_loan_tree_large" action="action_account_loan_tree_large"/>
+		<menuitem name="Financial Management/Loan/Personal Loan/Large Loans" parent="menu_action_account_loan_form" id="menu_action_account_loan_tree_large"/>
 		
 		<record model="ir.ui.view" id="view_account_loan_bank_cheque_form">
 			<field name="name">account.loan.bank.cheque.form</field>
@@ -391,7 +392,7 @@
 			<field name="view_mode">form,tree</field>
 		</record>
 
-		<menuitem name="Financial Management/Loan/Cheque" id="menu_account_loan_bank_cheque_form" action="action_account_loan_bank_cheque"/>
+		<menuitem name="Financial Management/Loan/Cheque" id="menu_account_loan_bank_cheque_form"/>
 
 		<record model="ir.actions.act_window" id="action_account_loan_bank_cheque_draft">
 			<field name="name">account.loan.bank.cheque</field>
@@ -400,7 +401,7 @@
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('state','=','draft'),('date','=',time.strftime('%Y-%m-%d'))]</field>
 		</record>
-		<menuitem name="Financial Management/Loan/Cheque/Draft" id="menu_action_account_loan_bank_cheque_draft" action="action_account_loan_bank_cheque_draft"/>
+		<menuitem name="Financial Management/Loan/Cheque/Draft" parent="menu_account_loan_bank_cheque_form" id="menu_action_account_loan_bank_cheque_draft" />
 
 		<record model="ir.actions.act_window" id="action_account_loan_bank_cheque_posted">
 			<field name="name">account.loan.bank.cheque</field>
@@ -409,7 +410,7 @@
 			<field name="view_mode">tree,form</field>
 			<field name="domain">[('state','=','posted'),('date','=',time.strftime('%Y-%m-%d'))]</field>
 		</record>
-		<menuitem name="Financial Management/Loan/Cheque/Posted" id="menu_action_account_loan_bank_cheque_posted" action="action_account_loan_bank_cheque_posted"/>
+		<menuitem name="Financial Management/Loan/Cheque/Posted" parent="menu_account_loan_bank_cheque_form" id="menu_action_account_loan_bank_cheque_posted"/>
 
 		<record model="ir.ui.view" id="view_account_loan_installment_form">
 			<field name="name">account.loan.installment.form</field>
@@ -448,6 +449,6 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">form,tree</field>
 		</record>
-		<menuitem name="Financial Management/Loan/Installment" id="menu_account_loan_installment_form" action="action_account_loan_installment_form"/>
+		<menuitem name="Financial Management/Loan/Installment" parent="menu_loan_root" id="menu_account_loan_installment_form" />
 	</data>
 </openerp>

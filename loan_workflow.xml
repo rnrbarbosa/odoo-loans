@@ -2,10 +2,10 @@
 <openerp>
     <data>
 
-	    <record model="res.roles" id="Prof">
+	    <record model="res.groups" id="Proof">
 		    <field name="name">Proof Checking</field>
 	    </record>
-	    <record model="res.roles" id="Finance">
+	    <record model="res.groups" id="Finance">
 		    <field name="name">Finance Approvel</field>
 	    </record>
 
@@ -66,7 +66,7 @@
 		    <field name="act_from" ref="draft"/>
 		    <field name="act_to" ref="proof approval"/>
 		    <field name="signal">approve_proofs</field>
-		    <field name="role_id" ref="Prof"/>
+		    <field name="role_id" ref="Proof"/>
 	    </record>
 
 	    <record model="workflow.transition" id="loan_t2">

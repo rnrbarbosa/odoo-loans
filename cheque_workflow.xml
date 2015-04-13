@@ -3,11 +3,11 @@
 <openerp>
     <data>
 
-	    <record model="res.roles" id="ACC">
+	    <record model="res.groups" id="ACC">
 		    <field name="name">Chaque Posting</field>
 	    </record>
 
-	    <record model="res.roles" id="AP">
+	    <record model="res.groups" id="AP">
 		    <field name="name">Chaque Approvel</field>
 	    </record>
 

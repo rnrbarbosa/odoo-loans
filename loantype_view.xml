@@ -34,7 +34,8 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">form,tree</field>
 		</record>
-		<menuitem name="Financial Management/Configuration/Loan/Interest/Interest List" action="action_account_loan_loantype" id="menu_account_loan_loantype"/>
+		<menuitem name="Financial Management/Configuration/Loan/Interest" parent="menu_account_loan_bank_cheque_form"  id="menu_account_loan_interest"/>
+		<menuitem name="Financial Management/Configuration/Loan/Interest/Interest List" parent="menu_account_loan_interest" id="menu_account_loan_loantype"/>
 
 		<record model="ir.ui.view" id="formview_account_loan_loantype_interestversion">
 			<field name="name">account.loan.loantype.interestversion.form</field>
@@ -75,7 +76,7 @@
 			<field name="view_type">form</field>
 			<field name="view_mode">form,tree</field>
 		</record>
-		<menuitem name="Financial Management/Configuration/Loan/Interest/Interest Version"  action="action_account_loan_loantype_interestversion" id="menu_account_loan_loantype_interestversion"/>
+		<menuitem name="Financial Management/Configuration/Loan/Interest/Interest Version"  id="menu_account_loan_loantype_interestversion" parent="menu_account_loan_interest" />
 
 	    <record model="ir.ui.view" id="formview_account_loan_loantype_interestversionline">
 			    <field name="name">account.loan.loantype.interestversionline.form</field>
