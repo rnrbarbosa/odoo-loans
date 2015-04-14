@@ -48,8 +48,8 @@ class account_loan_proof(osv.osv):
         'state': fields.selection(
             [
                 ('draft','Draft'),
-                ('apply','Under Varification'),
-                ('done','Varified'),
+                ('apply','Under Verification'),
+                ('done','Verified'),
                 ('cancel','Cancel')
             ],'State', readonly=True, select=True),
     }

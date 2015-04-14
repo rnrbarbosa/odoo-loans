@@ -31,7 +31,7 @@ class account_loan_installment(osv.osv):
         'capital': fields.float('Installment'),
         'interest': fields.float('Interest'),
         'total': fields.float('Installment'),
-        'cheque_id' : fields.many2one('account.loan.bank.cheque','Bank Cheque')
+        'cheque_id' : fields.many2one('account.loan.bank.cheque','Bank Transfer')
     }
 account_loan_installment()
 

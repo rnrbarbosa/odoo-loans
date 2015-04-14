@@ -29,7 +29,7 @@
     "description": """Loan Management System
     * Integrated to Accounting System
     * Usefull for any type of Loans - Home, Business, Personal
-    * Clean Varification Process for Proofs 
+    * Clean Verification Process for Proofs 
     * Workflow for Loan Approval/Rejection
     * Reports related to the Loans, Documents, Loan Papers
     * Dynamic Interest Rates Calculation

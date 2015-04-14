@@ -110,7 +110,7 @@ class account_loan(osv.osv):
         ],'State', readonly=True, select=True),
         'return_type': fields.selection([
            ('cash','By Cash'),
-           ('cheque','By Cheque'),
+           ('cheque','By Transfer'),
            ('automatic','Automatic Payment'),
         ],'Payment Type', select=True),
         'pricelist_id': fields.many2one('product.pricelist', 'Pricelist', required=False, readonly=True, states={'draft':[('readonly',False)]}),

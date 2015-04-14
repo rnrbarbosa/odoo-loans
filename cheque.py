@@ -36,7 +36,7 @@ class account_loan_bank_cheque(osv.osv):
         'loan_bank_id':fields.many2one('res.partner.bank','Bank', required=True),
         'loan':fields.float('Loan Amount', size=32),
         'interest':fields.float('Interest Amount', size=32),
-        'cheque_amount':fields.float('Cheque Amount', size=32, required=True),
+        'cheque_amount':fields.float('Transfer Amount', size=32, required=True),
         'account_id':fields.many2one('account.account', 'General Account', required=True, select=True),
         'state':fields.selection([
                 ('draft','Draft'),
@@ -47,7 +47,7 @@ class account_loan_bank_cheque(osv.osv):
                 ('done','Done')
             ],'State', readonly=True, select=True),
         'date':fields.date('Date', required=True),
-        'clear_date':fields.date('Cheque Clearing Date', required=False, readonly=True),
+        'clear_date':fields.date('Transfer Clearing Date', required=False, readonly=True),
         'return_date':fields.date('Cheque Return Date', required=False, readonly=True),
         'note':fields.text('Notes'),
         'cheque_id' :fields.one2many('account.loan.installment','cheque_id','Installments'),
