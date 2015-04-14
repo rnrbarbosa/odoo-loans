@@ -33,7 +33,7 @@ class account_loan_installment(osv.osv):
         'total': fields.float('Installment'),
         'cheque_id' : fields.many2one('account.loan.bank.cheque','Bank Cheque')
     }
-account_loan_installment();
+account_loan_installment()
 
 class loan_installment_period(osv.osv):
     _name = 'loan.installment.period'
@@ -41,4 +41,4 @@ class loan_installment_period(osv.osv):
         'name':fields.char('Period Name', size=64, required=True),
         'period':fields.integer('Loan Period', required = True),
    }
-loan_installment_period();
+loan_installment_period()
