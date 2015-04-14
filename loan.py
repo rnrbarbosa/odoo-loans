@@ -202,7 +202,9 @@ class account_loan(osv.osv):
 
     def onchange_loan_period(self, cr, uid, ids, part):
         sear_list = self.pool.get('loan.installment.period').search(cr,uid,[('name','=',part)])
-        value_period = self.pool.get('loan.installment.period').browse(cr, uid, sear_list[0]).period
+        value_period = 0
+        if sear_list:
+            value_period = self.pool.get('loan.installment.period').browse(cr, uid, sear_list)[0].period
         return {'value':{'total_installment': value_period}}
 
     def loan_interest_get(self,cr, uid, ids,context={}):

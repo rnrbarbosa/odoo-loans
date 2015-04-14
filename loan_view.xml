@@ -8,8 +8,10 @@
 			<field name="model">account.loan.proof.type</field>
 			<field name="arch" type="xml">
 				<form string="Loan Proof Type">
-					<field name="name" select="1"/>
-					<field name="shortcut" select="1"/>
+					<group col="4">
+						<field name="name" select="1"/>
+						<field name="shortcut" select="1"/>
+					</group>
 				</form>
 			</field>
 		</record>
@@ -39,8 +41,10 @@
 			<field name="model">loan.installment.period</field>
 			<field name="arch" type="xml">
 				<form string="Loan Period">
-					<field name="name" select="1"/>
-					<field name="period" select="1"/>
+					<group col="4">
+						<field name="name" select="1"/>
+						<field name="period" select="1"/>
+					</group>
 				</form>
 			</field>
 		</record>
@@ -116,19 +120,21 @@
 			<field name="model">account.loan.proof</field>
 			<field name="arch" type="xml">
 				<form string="Proof Document">
-					<field name="name" select="1"/>
-					<field name="loan_id" invisible="1"/>
-					<field name="type" select="1"/>
-					<newline />
-					<field name="note" select="1" colspan="4"/>
-					<newline />
-					<field name="document" colspan="4"/>
-					<newline />
-					<group col="7" colspan="4">
-						<field name="state" readonly="1" select="1"/>
-						<button name="apply_varification" type="object" states="draft" string="Apply For Varification"/>
-						<button name="proof_varified" type="object" states="apply" string="Accept"/>
-						<button name="proof_canceled" type="object" states="apply" string="Refuse"/>
+					<group col="4">
+						<field name="name" select="1"/>
+						<field name="loan_id" invisible="1"/>
+						<field name="type" select="1"/>
+						<newline />
+						<field name="note" select="1" colspan="4"/>
+						<newline />
+						<field name="document" colspan="4"/>
+						<newline />
+						<group col="7" colspan="4">
+							<field name="state" readonly="1" select="1"/>
+							<button name="apply_varification" type="object" states="draft" string="Apply For Varification"/>
+							<button name="proof_varified" type="object" states="apply" string="Accept"/>
+							<button name="proof_canceled" type="object" states="apply" string="Refuse"/>
+						</group>
 					</group>
 				</form>
 			</field>
@@ -171,28 +177,30 @@
 			<field name="model">account.loan</field>
 			<field name="arch" type="xml">
 				<form string="Loan Details">
-				    <separator string="General Information" colspan="4"/>
-					<field name="loan_id" select="1"/>
-					<field name="name" select="1"/>
-					<field name="apply_date" select="1"/>
-					<field name="approve_date" select="1"/>
+					<group col="4">
+						<separator string="General Information" colspan="4"/>
+						<field name="loan_id" select="1"/>
+						<field name="name" select="1"/>
+						<field name="apply_date" select="1"/>
+						<field name="approve_date" select="1"/>
+					</group>
 					<notebook colspan="4">
 						<page string="Loan">
-    						<group col="6" colspan="4">
-    							<field name="partner_id" select="1"  on_change="onchange_partner_id(partner_id)" />
-    							<field name="contact" select="1" domain="[('partner_id','=',partner_id)]"/>
-    							<field name="loan_amount" select="1"/>
-    							
-    							<field name="loan_period" select="1" on_change="onchange_loan_period(loan_period)"/>
-    							<field name="total_installment" select="1"/>
-    							<field name="loan_type" select="1"/>
-    							
-    							<field name="approve_amount" select="1"/>
-    							<field name="interest_rate" select="1"/>
-    							
-    							<field name="process_fee" select="1"/>
-    							<!--field name="interest"/-->
-                            </group>
+							<group col="6" colspan="4">
+								<field name="partner_id" select="1"  on_change="onchange_partner_id(partner_id)" />
+								<field name="contact" select="1" domain="[('partner_id.parent_id','=',partner_id)]"/>
+								<field name="loan_amount" select="1"/>
+								
+								<field name="loan_period" select="1" on_change="onchange_loan_period(loan_period)"/>
+								<field name="total_installment" select="1"/>
+								<field name="loan_type" select="1"/>
+								
+								<field name="approve_amount" select="1"/>
+								<field name="interest_rate" select="1"/>
+								
+								<field name="process_fee" select="1"/>
+								<!--field name="interest"/-->
+	                        </group>
 							<separator string="Installment Information" colspan="4"/>
 							<field name="installment_id" select="1" colspan="4" nolabel="1"/>
 							<!--field name="running_loan" colspan="4" select="1" domain="[['auto_id','&lt;',auto_id],['partner_id','=',partner_id]]"/-->
@@ -200,7 +208,7 @@
 							<!--domain="[['auto_id','&lt;',auto_id],['partner_id','=',partner_id]]"-->
 
 							<group col="10" colspan="4">
-							    <field name="return_type"/>
+								<field name="return_type"/>
 								<field name="state" readonly="1" select="1"/>
 								<button name="loan_draft" states="cancel" string="Re Apply"/>
 								<button name="approve_proofs" states="draft" string="Approve Proofs"/>
@@ -211,35 +219,43 @@
 							</group>
 						</page>
 						<page string="Proofs">
-							<field name="id" invisible="1"/>
-							<field name="proof_id" colspan="4" nolabel="1" context="loan_id=id"/>
-							<field name="proof_1" select="1"/>
-							<field name="proof_2" select="2"/>
+							<group col="4">
+								<field name="id" invisible="1"/>
+								<field name="proof_id" colspan="4" nolabel="1" context="loan_id=id"/>
+								<field name="proof_1" select="1"/>
+								<field name="proof_2" select="2"/>
+							</group>
 						</page>
-                    	<page string="Accounting">
-                        	<field name="cus_pay_acc"/>
-                        	<field name="bank_acc"/>
-                        	<newline/>
-                        	<field name="int_acc"/>
-                        	<field name="anal_acc"/>
-                        	<field name="proc_fee"/>                        	
-                        	<newline/> 
-                        	<field name="move_id" colspan="4" nolabel="1"/>                    	
-                        </page>					
-                        
+	                	<page string="Accounting">
+							<group col="4">
+			                	<field name="cus_pay_acc"/>
+			                	<field name="bank_acc"/>
+			                	<newline/>
+			                	<field name="int_acc"/>
+			                	<field name="anal_acc"/>
+			                	<field name="proc_fee"/>                        	
+			                	<newline/> 
+			                	<field name="move_id" colspan="4" nolabel="1"/>
+							</group>                    	
+	                    </page>					
+	                    
 						<page string="Cheque Details">
-							<separator string="Invoicing Information" colspan="4"/>
-							<field name="voucher_id" domain= "[('voucher_id','=',voucher_id)]"  />
-							<newline/>
-							<separator string="BankChaques Information" colspan="4"/>
-							<field name="cheque_ids" select="1" nolabel="1" colspan="4"/>
+							<group col="2">
+								<separator string="Invoicing Information" colspan="4"/>
+								<field name="voucher_id" domain= "[('voucher_id','=',voucher_id)]"  />
+								<newline/>
+								<separator string="BankChaques Information" colspan="4"/>
+								<field name="cheque_ids" select="1" nolabel="1" colspan="4"/>
+							</group>
 						</page>
-                        
+	                    
 						<page string="Notes">
-						    <separator string="Terms and Confitions" colspan="4"/>
-							<field name="notes" colspan="4" nolabel="1"/>
+							<group colspan="4">
+								<separator string="Terms and Confitions" colspan="4"/>
+								<field name="notes" colspan="4" nolabel="1"/>
+							</group>
 						</page>
-						
+					
 						<page string="EMI Calculator">
 							<group>
 								<field name="loan_amt"/>
@@ -248,14 +264,14 @@
 								<newline/>
 								<field name="int_rate"/>
 								<newline/>
-							
+						
 								<separator string="Monthly Payment (EMI)" colspan="4"/>	
-							
+						
 								<group colspan="1" >				
 									<button name="cal_amt"  string="Calculate" type="object"/>
 									<button name="re_set"  string="Reset" type="object"/>
 								</group>
-								
+							
 								<newline/>				
 								<field name="emi_cal"/>
 								<newline/>
@@ -269,7 +285,7 @@
 								<newline/>	
 								<field name="yr_int_amt"/>
 								<newline/>	
-							</group>																																													
+							</group>
 						</page>						
 					</notebook>
 				</form>
@@ -326,21 +342,23 @@
 			<field name="model">account.loan.bank.cheque</field>
 			<field name="arch" type="xml">
 				<form string="Cheque Details">
-					<field name="name" select="1"/>
-					<field name="code" select="1"/>
-					<field name="partner_id" on_change="onchange_bank_id(partner_id)" select="1"/>
-					<field name="loan_id" domain="[('partner_id','=',partner_id)]" select="1"/>
-					<field name="loan_bank_id" domain="[('partner_id','=',partner_id)]" select="1"/>
-					<field name="account_id" domain="[('bank_id','=',loan_bank_id)]" select="1"/>
-					<field name="cheque_amount" select="1"/>
-					<field name="date" select="1"/>
-					<field name="clear_date" select="1"/>
-					<field name="return_date" select="1"/>
-					<field name="loan" select="1"/>
-					<field name="interest" select="1"/>
-					<field name="voucher_id" select="1"/>
-					<newline/>
-					<field name='note' colspan='7'/>
+					<group col="4">
+						<field name="name" select="1"/>
+						<field name="code" select="1"/>
+						<field name="partner_id" on_change="onchange_bank_id(partner_id)" select="1"/>
+						<field name="loan_id" domain="[('partner_id','=',partner_id)]" select="1"/>
+						<field name="loan_bank_id" domain="[('partner_id','=',partner_id)]" select="1"/>
+						<field name="account_id" domain="[('bank_id','=',loan_bank_id)]" select="1"/>
+						<field name="cheque_amount" select="1"/>
+						<field name="date" select="1"/>
+						<field name="clear_date" select="1"/>
+						<field name="return_date" select="1"/>
+						<field name="loan" select="1"/>
+						<field name="interest" select="1"/>
+						<field name="voucher_id" select="1"/>
+						<newline/>
+						<field name='note' colspan='7'/>
+					</group>
 					<group col="8" colspan="4">
 						<field name="state"/>
 						<button name="post_bank" states="draft" string="Post to Bank" />
@@ -357,7 +375,6 @@
 		<record model="ir.ui.view" id="view_account_loan_bank_cheque_tree">
 			<field name="name">account.loan.bank.cheque.tree</field>
 			<field name="model">account.loan.bank.cheque</field>
-			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Cheque Details" editable="top">
 					<field name="name"/>
@@ -406,12 +423,14 @@
 			<field name="model">account.loan.installment</field>
 			<field name="arch" type="xml">
 				<form string="Installments">
-					<field name="loan_id" select="1" domain="[('partner_id','=',partner_id)]"/>
-					<field name="name" select="1"/>
-					<field name="cheque_id" select="1" domain="[('loan_id','=',loan_id)]"/>
-					<field name="capital" select="1"/>
-					<field name="interest" select="1"/>
-					<field name="total" select="1"/>
+					<group col="4">
+						<field name="loan_id" select="1" domain="[('partner_id','=',partner_id)]"/>
+						<field name="name" select="1"/>
+						<field name="cheque_id" select="1" domain="[('loan_id','=',loan_id)]"/>
+						<field name="capital" select="1"/>
+						<field name="interest" select="1"/>
+						<field name="total" select="1"/>
+					</group>
 				</form>
 			</field>
 		</record>

@@ -4,13 +4,14 @@
 		<record model="ir.ui.view" id="formview_account_loan_loantype">
 			<field name="name">account.loan.loantype.form</field>
 			<field name="model">account.loan.loantype</field>
-			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Interest List">
-					<field name="name" select="1"/>
-					<field name="calculation" select="1"/>
-					<field name="interestversion_ids" colspan="4"/>
-					<field name="prooftypes" colspan="4" rowspan="1"/>
+					<group col="4">
+						<field name="name" select="1"/>
+						<field name="calculation" select="1"/>
+						<field name="interestversion_ids" colspan="4"/>
+						<field name="prooftypes" colspan="4" rowspan="1"/>
+					</group>
 				</form>
 			</field>
 		</record>
@@ -18,7 +19,6 @@
 		<record model="ir.ui.view" id="treeview_account_loan_loantype">
 			<field name="name">account.loan.loantype.tree</field>
 			<field name="model">account.loan.loantype</field>
-			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Loan Types">
 					<field name="name" select="1"/>
@@ -29,27 +29,28 @@
 
 		<record model="ir.actions.act_window" id="action_account_loan_loantype">
 			<field name="name">account.loan.loantype</field>
-			<field name="type">ir.actions.act_window</field>
 			<field name="res_model">account.loan.loantype</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">form,tree</field>
 		</record>
-		<menuitem name="Financial Management/Configuration/Loan/Interest" parent="menu_account_loan_bank_cheque_form"  id="menu_account_loan_interest"/>
-		<menuitem name="Financial Management/Configuration/Loan/Interest/Interest List" parent="menu_account_loan_interest" id="menu_account_loan_loantype"/>
+
+		<menuitem name="Interest" parent="menu_account_loan_bank_cheque_form"  id="menu_account_loan_interest"/>
+		<menuitem name="Interest List" parent="menu_account_loan_interest" id="menu_account_loan_loantype" action="action_account_loan_loantype"/>
 
 		<record model="ir.ui.view" id="formview_account_loan_loantype_interestversion">
 			<field name="name">account.loan.loantype.interestversion.form</field>
 			<field name="model">account.loan.loantype.interestversion</field>
-			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Loantype Interest Version">
-					<field name="name" select="1"/>
-					<field name="sequence" select="1"/>
-					<field name="start_date" select="1"/>
-					<field name="end_date" select="1"/>
-					<field name="active" select="1"/>
-					<newline />
-					<field name="interestversionline_ids" select="1" colspan="3" />
+					<group col="4">
+						<field name="name" select="1"/>
+						<field name="sequence" select="1"/>
+						<field name="start_date" select="1"/>
+						<field name="end_date" select="1"/>
+						<field name="active" select="1"/>
+						<newline />
+						<field name="interestversionline_ids" select="1" colspan="3" />
+					</group>
 				</form>
 			</field>
 		</record>
@@ -57,7 +58,6 @@
 		<record model="ir.ui.view" id="treeview_account_loan_loantype_interestversion">
 			<field name="name">account.loan.loantype.interestversion.tree</field>
 			<field name="model">account.loan.loantype.interestversion</field>
-			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Interest Version">
 					<field name="name"/>
@@ -71,33 +71,32 @@
 
 		<record model="ir.actions.act_window" id="action_account_loan_loantype_interestversion">
 			<field name="name">account.loan.loantype.interestversion</field>
-			<field name="type">ir.actions.act_window</field>
 			<field name="res_model">account.loan.loantype.interestversion</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">form,tree</field>
 		</record>
-		<menuitem name="Financial Management/Configuration/Loan/Interest/Interest Version"  id="menu_account_loan_loantype_interestversion" parent="menu_account_loan_interest" />
+		<menuitem name="Interest Version"  id="menu_account_loan_loantype_interestversion" parent="menu_account_loan_interest" action="action_account_loan_loantype_interestversion"/>
 
 	    <record model="ir.ui.view" id="formview_account_loan_loantype_interestversionline">
 			    <field name="name">account.loan.loantype.interestversionline.form</field>
 			    <field name="model">account.loan.loantype.interestversionline</field>
-			    <field name="type">form</field>
 			    <field name="arch" type="xml">
 				    <form string="Interest Version Line">
-					    <field name="name" select="1"/>
-					    <field name="min_month" select="1"/>
-					    <field name="max_month" select="1"/>
-					    <field name="min_amount" select="1"/>
-					    <field name="max_amount" select="1"/>
-					    <field name="rate" select="1" />
-					    <field name="sequence" select="1"/>
+						<group col="4">
+							<field name="name" select="1"/>
+							<field name="min_month" select="1"/>
+							<field name="max_month" select="1"/>
+							<field name="min_amount" select="1"/>
+							<field name="max_amount" select="1"/>
+							<field name="rate" select="1" />
+							<field name="sequence" select="1"/>
+						</group>
 				    </form>
 			    </field>
 	    </record>
 	    <record model="ir.ui.view" id="treeview_account_loan_loantype_interestversionline">
 			    <field name="name">account.loan.loantype.interestversionline.tree</field>
 			    <field name="model">account.loan.loantype.interestversionline</field>
-			    <field name="type">tree</field>
 			    <field name="arch" type="xml">
 				    <tree string="Loan Interest Version Line">
 					    <field name="name" select="1"/>
@@ -112,7 +111,6 @@
 	    </record>
 	    <record model="ir.actions.act_window" id="action_account_loan_loantype_interestversionline">
 			    <field name="name">account.loan.loantype.interestversionline</field>
-			    <field name="type">ir.actions.act_window</field>
 			    <field name="res_model">account.loan.loantype.interestversionline</field>
 			    <field name="view_type">form</field>
 			    <field name="view_mode">form,tree</field>

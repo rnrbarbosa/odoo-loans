@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <openerp>
 <data noupdate="1">
-#
-	# Resource: loan_installment_period
-	#
+
+	<!--Resource: loan_installment_period-->
+	
 
 <record id="loan_period_installment_p1" model="loan.installment.period">
 	<field name="name">1 Year</field>
