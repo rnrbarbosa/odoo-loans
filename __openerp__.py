@@ -42,9 +42,9 @@
         "loan_view.xml",
         "loantype_view.xml",
         "loan_sequence.xml",
-        "loan_report.xml",
+        #"loan_report.xml",
         "loan_workflow.xml",
-#        "loan_wizard.xml",
+        #"loan_wizard.xml",
         "cheque_workflow.xml",
     ],
     "installable": True

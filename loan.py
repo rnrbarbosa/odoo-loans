@@ -89,7 +89,7 @@ class account_loan(osv.osv):
         'partner_id': fields.many2one('res.partner', 'Customer'),
         'proof_1': fields.many2one('res.partner', 'Gaurenter 1'),
         'proof_2': fields.many2one('res.partner', 'Gaurenter 2'),
-        'contact': fields.many2one('res.partner.address', 'Contact'),
+        'contact': fields.many2one('res.partner', 'Contact'),
         'loan_type':fields.selection(_loan_type_get,'Loan Type', size=32 ,select=True, required=True),
         'loan_period':fields.selection(_loan_period_get,'Loan Period',select=True, required=True),
         'loan_amount': fields.float('Loan Amount',digits=(12,2), states={'draft':[('readonly',False)]}),
